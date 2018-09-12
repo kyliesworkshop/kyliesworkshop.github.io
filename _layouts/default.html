@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 	<html>
-		<head>
-			<title>{{ page.title }}</title>
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
-		</head>
+		{% include header.html title=page.title %}
 		<body>
 			{% include navigation.html %}
 			<div class="container">
