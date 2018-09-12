@@ -1,18 +1,39 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#"><i class="material-icons">toys</i>Kylie's Workshop</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <i class="material-icons" id="icon-toys">toys</i>
+  <a class="navbar-brand icon-title" href="#">Kylie's Workshop</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+
+      <li class="nav-item">
+        {% if page.active_nav == 'home' %}
+            <a class="nav-link active" href="#">Home</a>
+        {% else %}
+            <a class="nav-link" href="/">Home</a>
+        {% endif %}
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="https://youtube.com/kyliesworkshop">YouTube</a>
+        {% if page.active_nav == 'youtube' %}
+            <a class="nav-link active" href="#">YouTube</a>
+        {% else %}
+            <a class="nav-link" href="/youtube">YouTube</a>
+        {% endif %}
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Gallery</a>
+        {% if page.active_nav == 'gallery' %}
+            <a class="nav-link active" href="#">Gallery</a>
+        {% else %}
+            <a class="nav-link" href="/gallery">Gallery</a>
+        {% endif %}
+      </li>
+      <li class="nav-item">
+        {% if page.active_nav == 'contact' %}
+            <a class="nav-link active" href="#">Contact</a>
+        {% else %}
+            <a class="nav-link" href="/contact">Contact</a>
+        {% endif %}
       </li>
     </ul>
   </div>
