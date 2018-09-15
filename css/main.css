@@ -16,8 +16,11 @@ footer {
 #icon-toys {
   color: #3cbbc1;
 }
+.card {
+    border: none;
+}
 body{
-  background-color: #f7feff;
+  background-color: #FFFFFF;
 }
 a.icon-title {
   color: #5fd6e8 !important;
