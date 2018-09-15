@@ -22,3 +22,19 @@ body{
 a.icon-title {
   color: #5fd6e8 !important;
 }
+.social-media-icons {
+  font-size: 40px;
+  padding-top: 0px;
+}
+.fntAweInstagram {
+  padding-left: 20px;
+  color: black;
+}
+.fntAweYoutube {
+  padding-left: 20px;
+  color: black;
+}
+.fntAweFacebook {
+  padding-left: 20px;
+  color: black;
+}
