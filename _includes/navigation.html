@@ -1,40 +1,48 @@
-<nav class="navbar navbar-expand-lg navbar-light">
-  <i class="material-icons" id="icon-toys">toys</i>
-  <a class="navbar-brand icon-title" href="#">Kylie's Workshop</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarText">
-    <ul class="nav navbar-nav navbar-right">
+<nav class="navbar navbar-expand-sm navbar-light">
+  <div class="container">
+    <img class="iconimage" src="../images/icon.png" alt="icon">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarRight" aria-controls="navbarRight" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarRight">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          {% if page.active_nav == 'home' %}
+              <a class="nav-link active" href="#">Home</a>
+          {% else %}
+              <a class="nav-link" href="/">Home</a>
+          {% endif %}
+        </li>
+        <li class="nav-item">
+          {% if page.active_nav == 'goals' %}
+              <a class="nav-link active" href="#">Goals</a>
+          {% else %}
+              <a class="nav-link" href="/goals">Goals</a>
+          {% endif %}
+        </li>
+        <li class="nav-item">
+          {% if page.active_nav == 'youtube' %}
+              <a class="nav-link active" href="#">YouTube</a>
+          {% else %}
+              <a class="nav-link" href="/youtube">YouTube</a>
+          {% endif %}
+        </li>
+        <li class="nav-item">
+          {% if page.active_nav == 'gallery' %}
+              <a class="nav-link active" href="#">Gallery</a>
+          {% else %}
+              <a class="nav-link" href="/gallery">Gallery</a>
+          {% endif %}
+        </li>
+        <li class="nav-item">
+          {% if page.active_nav == 'contact' %}
+              <a class="nav-link active" href="#">Contact</a>
+          {% else %}
+              <a class="nav-link" href="/contact">Contact</a>
+          {% endif %}
+        </li>
 
-      <li class="nav-item">
-        {% if page.active_nav == 'home' %}
-            <a class="nav-link active" href="#">Home</a>
-        {% else %}
-            <a class="nav-link" href="/">Home</a>
-        {% endif %}
-      </li>
-      <li class="nav-item">
-        {% if page.active_nav == 'youtube' %}
-            <a class="nav-link active" href="#">YouTube</a>
-        {% else %}
-            <a class="nav-link" href="/youtube">YouTube</a>
-        {% endif %}
-      </li>
-      <li class="nav-item">
-        {% if page.active_nav == 'gallery' %}
-            <a class="nav-link active" href="#">Gallery</a>
-        {% else %}
-            <a class="nav-link" href="/gallery">Gallery</a>
-        {% endif %}
-      </li>
-      <li class="nav-item">
-        {% if page.active_nav == 'contact' %}
-            <a class="nav-link active" href="#">Contact</a>
-        {% else %}
-            <a class="nav-link" href="/contact">Contact</a>
-        {% endif %}
-      </li>
-    </ul>
+      </ul>
+    </div>
   </div>
 </nav>

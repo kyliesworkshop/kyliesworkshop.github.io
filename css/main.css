@@ -41,3 +41,11 @@ a.icon-title {
   padding-left: 20px;
   color: black;
 }
+.iconimage {
+  height: 70px;
+  padding-left: 10px;
+}
+.blackbox {
+  background-color: black;
+  height: 800px;
+}
