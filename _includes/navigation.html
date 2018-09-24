@@ -13,27 +13,36 @@
               <a class="nav-link" href="/">Home</a>
           {% endif %}
         </li>
-        <li class="nav-item">
-          {% if page.active_nav == 'goals' %}
-              <a class="nav-link active" href="#">Goals</a>
-          {% else %}
-              <a class="nav-link" href="/goals">Goals</a>
-          {% endif %}
-        </li>
+          <li class="nav-item dropdown">
+              {% if page.active_nav == 'workshop' %}
+                <a class="nav-link active dropdown-toggle" id="navbarDropdownWorkshop" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Workshop</a>
+              {% else %}
+                <a class="nav-link dropdown-toggle" id="navbarDropdownWorkshop" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Workshop</a>
+              {% endif %}
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownWorkshop">
+                  <a class="dropdown-item" href="/Workshop/Journey.html">The Journey so far</a>
+                  <a class="dropdown-item" href="/Workshop/Ultimate.html">My Ultimate Workshop</a>
+              </div>
+          </li>
+          <li class="nav-item dropdown">
+              {% if page.active_nav == 'projects' %}
+                <a class="nav-link active dropdown-toggle" id="navbarDropdownProjects" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
+              {% else %}
+                <a class="nav-link dropdown-toggle" id="navbarDropdownProjects" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
+              {% endif %}
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownProjects">
+                  <a class="dropdown-item" href="/Projects/2016.html">2016 Projects</a>
+                  <a class="dropdown-item" href="/Projects/2017.html">2017 Projects</a>
+                  <a class="dropdown-item" href="/Projects/2018.html">2018 Projects</a>
+              </div>
+          </li>
         <li class="nav-item">
           {% if page.active_nav == 'youtube' %}
               <a class="nav-link active" href="#">YouTube</a>
           {% else %}
               <a class="nav-link" href="/youtube">YouTube</a>
           {% endif %}
-        </li>
-        <li class="nav-item">
-          {% if page.active_nav == 'gallery' %}
-              <a class="nav-link active" href="#">Gallery</a>
-          {% else %}
-              <a class="nav-link" href="/gallery">Gallery</a>
-          {% endif %}
-        </li>
+        </li>        
         <li class="nav-item">
           {% if page.active_nav == 'contact' %}
               <a class="nav-link active" href="#">Contact</a>
